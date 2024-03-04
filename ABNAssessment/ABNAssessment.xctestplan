@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "9A7C5D2F-8639-4F9F-9D7D-368B3A6DC631",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:ABNAssessment.xcodeproj",
+      "identifier" : "371932402B95FE9000F43CD9",
+      "name" : "ABNAssessment"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:ABNAssessment.xcodeproj",
+        "identifier" : "371932512B95FE9100F43CD9",
+        "name" : "ABNAssessmentTests"
+      }
+    }
+  ],
+  "version" : 1
+}
