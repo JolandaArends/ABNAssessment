@@ -25,6 +25,8 @@
 		371932A32B9608D900F43CD9 /* SimpleAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371932A22B9608D900F43CD9 /* SimpleAPIMock.swift */; };
 		371932A52B9608E200F43CD9 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371932A42B9608E200F43CD9 /* XCTestCase+MemoryLeakTracking.swift */; };
 		37E645802B96126C00EE26B0 /* PickLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E6457F2B96126C00EE26B0 /* PickLocationView.swift */; };
+		37E645842B96138300EE26B0 /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E645832B96138100EE26B0 /* DeepLink.swift */; };
+		37E645862B96143C00EE26B0 /* DeepLinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E645852B96143C00EE26B0 /* DeepLinkTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +61,9 @@
 		371932A02B9608C100F43CD9 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 		371932A22B9608D900F43CD9 /* SimpleAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAPIMock.swift; sourceTree = "<group>"; };
 		371932A42B9608E200F43CD9 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
-		371932A72B960E5C00F43CD9 /* Unit tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Unit tests.xctestplan"; path = "../../../Unit tests.xctestplan"; sourceTree = "<group>"; };
 		37E6457F2B96126C00EE26B0 /* PickLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PickLocationView.swift; path = ../../../../../../../PickLocationView.swift; sourceTree = "<group>"; };
+		37E645832B96138100EE26B0 /* DeepLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLink.swift; sourceTree = "<group>"; };
+		37E645852B96143C00EE26B0 /* DeepLinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,9 +87,8 @@
 		371932382B95FE9000F43CD9 = {
 			isa = PBXGroup;
 			children = (
-				3719326F2B95FEDD00F43CD9 /* ABNAssessment.xctestplan */,
-				371932A72B960E5C00F43CD9 /* Unit tests.xctestplan */,
 				371932432B95FE9000F43CD9 /* ABNAssessment */,
+				3719326F2B95FEDD00F43CD9 /* ABNAssessment.xctestplan */,
 				371932552B95FE9100F43CD9 /* ABNAssessmentTests */,
 				371932422B95FE9000F43CD9 /* Products */,
 			);
@@ -106,9 +108,9 @@
 			children = (
 				371932792B96024700F43CD9 /* API */,
 				371932742B9600AF00F43CD9 /* App */,
-				3719324A2B95FE9100F43CD9 /* ABNAssessment.entitlements */,
 				371932832B96036800F43CD9 /* Resources */,
 				3719324B2B95FE9100F43CD9 /* Preview Content */,
+				3719324A2B95FE9100F43CD9 /* ABNAssessment.entitlements */,
 			);
 			path = ABNAssessment;
 			sourceTree = "<group>";
@@ -129,6 +131,7 @@
 				371932A42B9608E200F43CD9 /* XCTestCase+MemoryLeakTracking.swift */,
 				371932982B96075F00F43CD9 /* Mocks */,
 				3719329B2B96077D00F43CD9 /* Scenes */,
+				37E645852B96143C00EE26B0 /* DeepLinkTests.swift */,
 			);
 			path = ABNAssessmentTests;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 				371932442B95FE9000F43CD9 /* ABNAssessmentApp.swift */,
 				371932752B9600CB00F43CD9 /* Scenes */,
 				371932942B9605F200F43CD9 /* ViewState.swift */,
+				37E645832B96138100EE26B0 /* DeepLink.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -316,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3719328C2B96058800F43CD9 /* LocationsList.swift in Sources */,
+				37E645842B96138300EE26B0 /* DeepLink.swift in Sources */,
 				371932732B96009000F43CD9 /* DataFile.swift in Sources */,
 				371932852B96043300F43CD9 /* LocationsView.swift in Sources */,
 				371932952B9605F200F43CD9 /* ViewState.swift in Sources */,
@@ -335,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				371932A32B9608D900F43CD9 /* SimpleAPIMock.swift in Sources */,
+				37E645862B96143C00EE26B0 /* DeepLinkTests.swift in Sources */,
 				371932A52B9608E200F43CD9 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				3719329E2B9607A500F43CD9 /* LocationsViewModelTests.swift in Sources */,
 			);
@@ -476,6 +482,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ABNAssessment/Preview Content\"";
+				DEVELOPMENT_TEAM = RTYQ8VV4GT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "ABN Assessment";
@@ -514,6 +521,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ABNAssessment/Preview Content\"";
+				DEVELOPMENT_TEAM = RTYQ8VV4GT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "ABN Assessment";

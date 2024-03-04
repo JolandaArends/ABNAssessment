@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct LocationsView: View {
     @ObservedObject var viewModel: LocationsViewModel
+    @Environment(\.openURL) private var openURL
     
     var body: some View {
         NavigationView {
@@ -16,8 +18,8 @@ struct LocationsView: View {
                 screenHeader
                 
                 List {
-                    abnLocationsSection
                     customLocationSection
+                    abnLocationsSection
                 }
                 .listStyle(.insetGrouped)
                 .task {
@@ -35,9 +37,22 @@ struct LocationsView: View {
 
 private extension LocationsView {
     var screenHeader: some View {
-        Text("Pick a location and look it up in the Wikipedia app. You can choose from a provided set of locations.")
+        Text("Pick a location and look it up in the Wikipedia app. You can choose from a provided set of locations or pick your own.")
             .font(.body)
             .padding(.horizontal)
+    }
+    
+    var customLocationSection: some View {
+        Section(header:
+            Text("My location")
+                .foregroundColor(.accentColor)
+        ) {
+            NavigationLink(
+                destination: PickLocationView(),
+                label: {
+                    Text("Open map to pick your own location")
+                })
+        }
     }
     
     var abnLocationsSection: some View {
@@ -55,7 +70,7 @@ private extension LocationsView {
             case .results:
                 ForEach(viewModel.locations, id: \.self) { location in
                     Button(action: {
-                        print("open Wikipedia app for location")
+                        openPlacesDeeplink(location)
                     }) {
                         LocationView(location: location)
                     }
@@ -65,17 +80,11 @@ private extension LocationsView {
         }
     }
     
-    var customLocationSection: some View {
-        Section(header:
-            Text("My location")
-                .foregroundColor(.accentColor)
-        ) {
-            NavigationLink(
-                destination: PickLocationView(),
-                label: {
-                    Text("Open map to pick your own location")
-                })
-        }
+    func openPlacesDeeplink(_ location: Location) {
+        let coordinates = CLLocationCoordinate2D(latitude: location.lat,
+                                                 longitude: location.long)
+        guard let deepLink = DeepLink.createPlacesDeepLinkWithCoordinates(for: coordinates) else { return }
+        openURL(deepLink)
     }
 }
 
