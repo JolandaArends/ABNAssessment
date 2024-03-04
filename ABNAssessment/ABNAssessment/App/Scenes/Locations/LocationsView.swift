@@ -69,15 +69,25 @@ private extension LocationsView {
                 Text("Something went wrong. Please try again by refreshing the list.")
             case .results:
                 ForEach(viewModel.locations, id: \.self) { location in
-                    Button(action: {
-                        openPlacesDeeplink(location)
-                    }) {
-                        LocationView(location: location)
-                    }
-                    .buttonStyle(.plain)
+                    accessibleLocationRowView(location)
                 }
             }
         }
+    }
+    
+    func accessibleLocationRowView(_ location: Location) -> some View {
+        // Wrapping it in a button is better for accessibility
+        Button(action: {
+            openPlacesDeeplink(location)
+        }) {
+            // Needs a little hack to make entire row tappable (instead of just text), because we're using a buttonStyle.
+            HStack {
+                LocationView(location: location)
+                Spacer()
+            }
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
     }
     
     func openPlacesDeeplink(_ location: Location) {
