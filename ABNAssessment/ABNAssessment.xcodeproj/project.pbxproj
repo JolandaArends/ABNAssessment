@@ -24,6 +24,7 @@
 		371932A12B9608C200F43CD9 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371932A02B9608C100F43CD9 /* LocationsViewModel.swift */; };
 		371932A32B9608D900F43CD9 /* SimpleAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371932A22B9608D900F43CD9 /* SimpleAPIMock.swift */; };
 		371932A52B9608E200F43CD9 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371932A42B9608E200F43CD9 /* XCTestCase+MemoryLeakTracking.swift */; };
+		374B1CA62B963BF2004BCEAC /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 374B1CA52B963BF1004BCEAC /* Documentation.docc */; };
 		37E645802B96126C00EE26B0 /* PickLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E6457F2B96126C00EE26B0 /* PickLocationView.swift */; };
 		37E645842B96138300EE26B0 /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E645832B96138100EE26B0 /* DeepLink.swift */; };
 		37E645862B96143C00EE26B0 /* DeepLinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E645852B96143C00EE26B0 /* DeepLinkTests.swift */; };
@@ -61,6 +62,7 @@
 		371932A02B9608C100F43CD9 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 		371932A22B9608D900F43CD9 /* SimpleAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAPIMock.swift; sourceTree = "<group>"; };
 		371932A42B9608E200F43CD9 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		374B1CA52B963BF1004BCEAC /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; name = Documentation.docc; path = ../../../../Documentation.docc; sourceTree = "<group>"; };
 		37E6457F2B96126C00EE26B0 /* PickLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PickLocationView.swift; path = ../../../../../../../PickLocationView.swift; sourceTree = "<group>"; };
 		37E645832B96138100EE26B0 /* DeepLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLink.swift; sourceTree = "<group>"; };
 		37E645852B96143C00EE26B0 /* DeepLinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkTests.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				371932742B9600AF00F43CD9 /* App */,
 				371932832B96036800F43CD9 /* Resources */,
 				3719324B2B95FE9100F43CD9 /* Preview Content */,
+				374B1CA52B963BF1004BCEAC /* Documentation.docc */,
 				3719324A2B95FE9100F43CD9 /* ABNAssessment.entitlements */,
 			);
 			path = ABNAssessment;
@@ -328,6 +331,7 @@
 				371932892B9604A400F43CD9 /* LocationView.swift in Sources */,
 				3719328B2B96056600F43CD9 /* SimpleAPI.swift in Sources */,
 				371932452B95FE9000F43CD9 /* ABNAssessmentApp.swift in Sources */,
+				374B1CA62B963BF2004BCEAC /* Documentation.docc in Sources */,
 				371932A12B9608C200F43CD9 /* LocationsViewModel.swift in Sources */,
 				3719328D2B96058B00F43CD9 /* Location.swift in Sources */,
 				3719328F2B9605AE00F43CD9 /* APIEndpoint.swift in Sources */,
