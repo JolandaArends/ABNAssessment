@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LocationsView: View {
+    @ObservedObject var viewModel: LocationsViewModel
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -17,6 +19,13 @@ struct LocationsView: View {
                     abnLocationsSection
                 }
                 .listStyle(.insetGrouped)
+                .task {
+                    await viewModel.fetchLocations()
+                }
+                // It's always important to allow the user to recover from a failure or mistatek
+                .refreshable {
+                    Task { await viewModel.fetchLocations() }
+                }
             }
             .navigationTitle("Locations")
         }
@@ -24,10 +33,6 @@ struct LocationsView: View {
 }
 
 private extension LocationsView {
-    private var locations: LocationsList {
-        return DataFile.load("locationsData.json")
-    }
-    
     var screenHeader: some View {
         Text("Pick a location and look it up in the Wikipedia app. You can choose from a provided set of locations.")
             .font(.body)
@@ -39,8 +44,22 @@ private extension LocationsView {
             Text("ABN locations")
                 .foregroundColor(.accentColor)
         ) {
-            ForEach(locations.locations, id: \.self) { location in
-                LocationView(location: location)
+            switch viewModel.abnLocationsState {
+            case .loading:
+                ProgressView()
+            case .empty:
+                Text("No locations found at ABN")
+            case .error:
+                Text("Something went wrong. Please try again by refreshing the list.")
+            case .results:
+                ForEach(viewModel.locations, id: \.self) { location in
+                    Button(action: {
+                        print("open Wikipedia app for location")
+                    }) {
+                        LocationView(location: location)
+                    }
+                    .buttonStyle(.plain)
+                }
             }
         }
     }
@@ -48,12 +67,12 @@ private extension LocationsView {
 
 #if DEBUG
 #Preview {
-    LocationsView()
+    LocationsView(viewModel: LocationsViewModel())
         .preferredColorScheme(.light)
 }
 
 #Preview {
-    LocationsView()
+    LocationsView(viewModel: LocationsViewModel())
         .preferredColorScheme(.dark)
 }
 #endif

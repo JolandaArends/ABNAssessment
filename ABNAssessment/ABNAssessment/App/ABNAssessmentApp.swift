@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct ABNAssessmentApp: App {
+    @StateObject var locationsViewModel = LocationsViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            LocationsView()
+            LocationsView(viewModel: locationsViewModel)
         }
     }
 }
