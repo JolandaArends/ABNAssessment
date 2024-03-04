@@ -8,10 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		371932452B95FE9000F43CD9 /* ABNAssessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371932442B95FE9000F43CD9 /* ABNAssessmentApp.swift */; };
-		371932472B95FE9000F43CD9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371932462B95FE9000F43CD9 /* ContentView.swift */; };
 		371932492B95FE9100F43CD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 371932482B95FE9100F43CD9 /* Assets.xcassets */; };
 		3719324D2B95FE9100F43CD9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3719324C2B95FE9100F43CD9 /* Preview Assets.xcassets */; };
 		371932572B95FE9100F43CD9 /* ABNAssessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371932562B95FE9100F43CD9 /* ABNAssessmentTests.swift */; };
+		371932712B96004700F43CD9 /* locationsData.json in Resources */ = {isa = PBXBuildFile; fileRef = 371932702B96004700F43CD9 /* locationsData.json */; };
+		371932732B96009000F43CD9 /* DataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371932722B96009000F43CD9 /* DataFile.swift */; };
+		3719327B2B96025600F43CD9 /* LocationsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3719327A2B96025600F43CD9 /* LocationsList.swift */; };
+		3719327D2B96028A00F43CD9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3719327C2B96028A00F43CD9 /* Location.swift */; };
+		371932852B96043300F43CD9 /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371932842B96043300F43CD9 /* LocationsView.swift */; };
+		371932892B9604A400F43CD9 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371932882B9604A400F43CD9 /* LocationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,13 +32,20 @@
 /* Begin PBXFileReference section */
 		371932412B95FE9000F43CD9 /* ABNAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABNAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		371932442B95FE9000F43CD9 /* ABNAssessmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABNAssessmentApp.swift; sourceTree = "<group>"; };
-		371932462B95FE9000F43CD9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		371932482B95FE9100F43CD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3719324A2B95FE9100F43CD9 /* ABNAssessment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ABNAssessment.entitlements; sourceTree = "<group>"; };
 		3719324C2B95FE9100F43CD9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		371932522B95FE9100F43CD9 /* ABNAssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ABNAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		371932562B95FE9100F43CD9 /* ABNAssessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABNAssessmentTests.swift; sourceTree = "<group>"; };
 		3719326F2B95FEDD00F43CD9 /* ABNAssessment.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ABNAssessment.xctestplan; sourceTree = "<group>"; };
+		371932702B96004700F43CD9 /* locationsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = locationsData.json; sourceTree = "<group>"; };
+		371932722B96009000F43CD9 /* DataFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFile.swift; sourceTree = "<group>"; };
+		3719327A2B96025600F43CD9 /* LocationsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationsList.swift; path = ../../../../../LocationsList.swift; sourceTree = "<group>"; };
+		3719327C2B96028A00F43CD9 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Location.swift; path = ../../../../../Location.swift; sourceTree = "<group>"; };
+		371932812B9602A300F43CD9 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Location.swift; path = ../../../../../../Location.swift; sourceTree = "<group>"; };
+		371932822B9602A300F43CD9 /* LocationsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationsList.swift; path = ../../../../../../LocationsList.swift; sourceTree = "<group>"; };
+		371932842B96043300F43CD9 /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
+		371932882B9604A400F43CD9 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +88,10 @@
 		371932432B95FE9000F43CD9 /* ABNAssessment */ = {
 			isa = PBXGroup;
 			children = (
-				371932442B95FE9000F43CD9 /* ABNAssessmentApp.swift */,
-				371932462B95FE9000F43CD9 /* ContentView.swift */,
-				371932482B95FE9100F43CD9 /* Assets.xcassets */,
+				371932792B96024700F43CD9 /* API */,
+				371932742B9600AF00F43CD9 /* App */,
 				3719324A2B95FE9100F43CD9 /* ABNAssessment.entitlements */,
+				371932832B96036800F43CD9 /* Resources */,
 				3719324B2B95FE9100F43CD9 /* Preview Content */,
 			);
 			path = ABNAssessment;
@@ -89,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				3719324C2B95FE9100F43CD9 /* Preview Assets.xcassets */,
+				371932702B96004700F43CD9 /* locationsData.json */,
+				371932722B96009000F43CD9 /* DataFile.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -99,6 +113,59 @@
 				371932562B95FE9100F43CD9 /* ABNAssessmentTests.swift */,
 			);
 			path = ABNAssessmentTests;
+			sourceTree = "<group>";
+		};
+		371932742B9600AF00F43CD9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				371932752B9600CB00F43CD9 /* Scenes */,
+				371932442B95FE9000F43CD9 /* ABNAssessmentApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		371932752B9600CB00F43CD9 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				371932762B9600D400F43CD9 /* Locations */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		371932762B9600D400F43CD9 /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				371932842B96043300F43CD9 /* LocationsView.swift */,
+				371932882B9604A400F43CD9 /* LocationView.swift */,
+			);
+			path = Locations;
+			sourceTree = "<group>";
+		};
+		371932792B96024700F43CD9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3719327E2B96029B00F43CD9 /* Locations */,
+				3719327A2B96025600F43CD9 /* LocationsList.swift */,
+				3719327C2B96028A00F43CD9 /* Location.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3719327E2B96029B00F43CD9 /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				371932822B9602A300F43CD9 /* LocationsList.swift */,
+				371932812B9602A300F43CD9 /* Location.swift */,
+			);
+			path = Locations;
+			sourceTree = "<group>";
+		};
+		371932832B96036800F43CD9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				371932482B95FE9100F43CD9 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				371932712B96004700F43CD9 /* locationsData.json in Resources */,
 				3719324D2B95FE9100F43CD9 /* Preview Assets.xcassets in Resources */,
 				371932492B95FE9100F43CD9 /* Assets.xcassets in Resources */,
 			);
@@ -201,7 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				371932472B95FE9000F43CD9 /* ContentView.swift in Sources */,
+				371932732B96009000F43CD9 /* DataFile.swift in Sources */,
+				3719327D2B96028A00F43CD9 /* Location.swift in Sources */,
+				371932852B96043300F43CD9 /* LocationsView.swift in Sources */,
+				371932892B9604A400F43CD9 /* LocationView.swift in Sources */,
+				3719327B2B96025600F43CD9 /* LocationsList.swift in Sources */,
 				371932452B95FE9000F43CD9 /* ABNAssessmentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

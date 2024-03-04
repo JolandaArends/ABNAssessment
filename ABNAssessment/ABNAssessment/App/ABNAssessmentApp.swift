@@ -11,7 +11,7 @@ import SwiftUI
 struct ABNAssessmentApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LocationsView()
         }
     }
 }
