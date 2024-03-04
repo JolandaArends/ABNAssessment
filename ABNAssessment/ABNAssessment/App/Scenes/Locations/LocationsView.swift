@@ -17,6 +17,7 @@ struct LocationsView: View {
                 
                 List {
                     abnLocationsSection
+                    customLocationSection
                 }
                 .listStyle(.insetGrouped)
                 .task {
@@ -61,6 +62,19 @@ private extension LocationsView {
                     .buttonStyle(.plain)
                 }
             }
+        }
+    }
+    
+    var customLocationSection: some View {
+        Section(header:
+            Text("My location")
+                .foregroundColor(.accentColor)
+        ) {
+            NavigationLink(
+                destination: PickLocationView(),
+                label: {
+                    Text("Open map to pick your own location")
+                })
         }
     }
 }

@@ -24,6 +24,7 @@
 		371932A12B9608C200F43CD9 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371932A02B9608C100F43CD9 /* LocationsViewModel.swift */; };
 		371932A32B9608D900F43CD9 /* SimpleAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371932A22B9608D900F43CD9 /* SimpleAPIMock.swift */; };
 		371932A52B9608E200F43CD9 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371932A42B9608E200F43CD9 /* XCTestCase+MemoryLeakTracking.swift */; };
+		37E645802B96126C00EE26B0 /* PickLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E6457F2B96126C00EE26B0 /* PickLocationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		371932A22B9608D900F43CD9 /* SimpleAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAPIMock.swift; sourceTree = "<group>"; };
 		371932A42B9608E200F43CD9 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		371932A72B960E5C00F43CD9 /* Unit tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Unit tests.xctestplan"; path = "../../../Unit tests.xctestplan"; sourceTree = "<group>"; };
+		37E6457F2B96126C00EE26B0 /* PickLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PickLocationView.swift; path = ../../../../../../../PickLocationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				371932A02B9608C100F43CD9 /* LocationsViewModel.swift */,
 				371932842B96043300F43CD9 /* LocationsView.swift */,
 				371932882B9604A400F43CD9 /* LocationView.swift */,
+				37E6457F2B96126C00EE26B0 /* PickLocationView.swift */,
 			);
 			path = Locations;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				371932732B96009000F43CD9 /* DataFile.swift in Sources */,
 				371932852B96043300F43CD9 /* LocationsView.swift in Sources */,
 				371932952B9605F200F43CD9 /* ViewState.swift in Sources */,
+				37E645802B96126C00EE26B0 /* PickLocationView.swift in Sources */,
 				371932892B9604A400F43CD9 /* LocationView.swift in Sources */,
 				3719328B2B96056600F43CD9 /* SimpleAPI.swift in Sources */,
 				371932452B95FE9000F43CD9 /* ABNAssessmentApp.swift in Sources */,
